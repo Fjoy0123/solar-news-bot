@@ -1,0 +1,20 @@
+{
+  "name": "solar-news-bot",
+  "version": "1.0.0",
+  "description": "光伏政策资讯自动爬取与网站生成",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node scrapers/run-all.js",
+    "build": "node generate-html.js",
+    "start": "npm run scrape && npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0",
+    "dayjs": "^1.11.13",
+    "fs-extra": "^11.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
